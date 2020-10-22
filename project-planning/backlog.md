@@ -1,3 +1,5 @@
+# Must haves:
+
 1. a simple website
 1. by using http methods:
 1. getting the data from the server
