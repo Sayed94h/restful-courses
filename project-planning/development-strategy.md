@@ -1,4 +1,5 @@
 # restful-courses
+The flow of this project is as follows
 
 ## 0. Setup
 
