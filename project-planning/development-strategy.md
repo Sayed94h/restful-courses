@@ -1,4 +1,5 @@
 # restful-courses
+
 The flow of this project is as follows
 
 ## 0. Setup
@@ -15,13 +16,45 @@ The flow of this project is as follows
 
 ## 1. Initialize Application
 
+> assigned to `Sayed Kazimi`
+
+**As a user I would like to see the initial page when I load the site**
+
+#### Created on the branch called `initial-app`
+
+This branch is merged to the master after completion
+
+### Task A: HTML
+
+- Added `head tag`, `title tag`, `meta tags`
+- Added `header tag`
+- Added `h tags`
+- Added `section tags`
+- Added `input tags`
+- Added `main tag`
+- Added `button tag`
+- Added `script tag`
+- Linked the css style file
+
+### Task B: CSS
+
+- Added style for the web page
+
+### Task C:
+
+...
+
+---
+
+## 2. Initialize Application
+
 > assigned to `YourName`
 
 **Your user story**
 
 #### Created on the branch called `Your Branch Name`
 
-This branch is merged to the master after completion 
+This branch is merged to the master after completion
 
 ### Task A:
 
@@ -32,4 +65,3 @@ This branch is merged to the master after completion
 ...
 
 ---
-

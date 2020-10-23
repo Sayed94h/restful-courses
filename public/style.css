@@ -1,3 +1,86 @@
 body {
-margin: 0;
+	margin: 0;
+}
+
+header.main-header {
+	background: #55f;
+	color: #fff;
+	border: 2px solid rgb(0, 17, 255);
+}
+
+header.main-header h1.first {
+	text-align: center;
+	margin-top: 4vh;
+}
+
+header.main-header h1.second {
+	text-align: center;
+	margin-top: 4vh;
+	margin-bottom: 4vh;
+}
+
+section.input-section {
+	margin-top: 6vh;
+	width: 60%;
+	margin-left: 20%;
+	background: rgb(247, 161, 2);
+	height: 80px;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+section.input-section input#input-todo {
+	width: 60%;
+	height: 40px;
+	border-radius: 4px;
+	font-size: 2vw;
+}
+
+section.input-section input#add-todo {
+	width: 30%;
+	height: 40px;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+	font-size: 2vw;
+	margin-left: 1vw;
+}
+
+section#todo-container {
+	margin-top: 6vh;
+	width: 60%;
+	margin-left: 20%;
+	background: rgb(247, 161, 2);
+	color: #fff;
+	border-radius: 4px;
+}
+
+section#todo-container * {
+	font-size: 1.5vw;
+	margin-top: 1%;
+}
+
+section.display {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 3vh;
+	width: 60%;
+	height: 60px;
+	margin-left: 20%;
+	background: rgb(247, 161, 2);
+	color: #fff;
+	border-radius: 4px;
+}
+
+section.display button {
+	width: 90%;
+	height: 50px;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 1.5vw;
+	margin-left: 1vw;
 }

@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restful Courses</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
-    <script src="./source/init.js" type="module"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Restful Courses</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<header class="main-header">
+			<h1 class="first">Create your todo list for free ;-)</h1>
+			<h1 class="second">We love to keep it simple and easy to use!</h1>
+		</header>
+
+		<main id="main-page">
+			<section class="input-section">
+				<input
+					type="text"
+					placeholder="Enter your todo title"
+					id="input-todo"
+				/>
+				<input type="button" value="Add To list" id="add-todo" />
+			</section>
+
+			<section class="display">
+				<!--    display button  -->
+				<button>Display Todos</button>
+			</section>
+			<!--    todo container  -->
+			<section id="todo-container">
+				<!--    append items inside this element    -->
+			</section>
+		</main>
+
+		<script src="./source/init.js" type="module"></script>
+		<script src="../app.js"></script>
+	</body>
 </html>
