@@ -1,0 +1,23 @@
+{
+  "name": "restful-courses",
+  "version": "1.0.0",
+  "description": "Practicing and learning the server side programming with Node.JS and HTTP methods",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sayed94h/restful-courses.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sayed94h/restful-courses/issues"
+  },
+  "homepage": "https://github.com/Sayed94h/restful-courses#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
