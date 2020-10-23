@@ -46,17 +46,107 @@ This branch is merged to the master after completion
 
 ---
 
-## 2. Initialize Application
+## 2. Add to Json file
+
+> assigned to `Sayed Kazimi`
+
+**Your user story**
+
+#### Created on the branch called `add-to-json`
+
+This branch is merged to the master after completion
+
+### Task A:
+
+- Store the data to the json file called courses.json using post http method
+
+### Task B:
+
+### Task C:
+
+...
+
+---
+
+## 3. Read from the json file
 
 > assigned to `YourName`
 
 **Your user story**
 
-#### Created on the branch called `Your Branch Name`
+#### Created on the branch called `read-from-json`
 
 This branch is merged to the master after completion
 
 ### Task A:
+
+- Read the data from the json file called courses.json using get http method
+
+### Task B:
+
+### Task C:
+
+...
+
+---
+
+## 4. Delete from the json file
+
+> assigned to `YourName`
+
+**Your user story**
+
+#### Created on the branch called `delete-from-json`
+
+This branch is merged to the master after completion
+
+### Task A:
+
+- Delete a specific data from the json file called courses.json using delete http method
+
+### Task B:
+
+### Task C:
+
+...
+
+---
+
+## 5. Update the json file
+
+> assigned to `YourName`
+
+**Your user story**
+
+#### Created on the branch called `update-json`
+
+This branch is merged to the master after completion
+
+### Task A:
+
+- Update or edit the data from the json file called courses.json using put http method
+
+### Task B:
+
+### Task C:
+
+...
+
+---
+
+## 6. Final-touch
+
+> assigned to `YourName`
+
+**Your user story**
+
+#### Created on the branch called `final-touch`
+
+This branch is merged to the master after completion
+
+### Task A:
+
+- make sure everything works as it has to work
 
 ### Task B:
 
