@@ -1,15 +1,9 @@
 "use-strict";
 
 // our main application for handling user interaction
-const express = require("express");
-const fs = require("fs");
-const app = express();
-let courses;
-app.get("/", function (req, res) {
-  fs.readFile("./courses.json", "utf-8", (err, data) => {
-    res.send(data);
-  });
-});
+
+
+
 app.get("/:id", function (req, res) {
   courses = JSON.parse(data);
   courses = courses.filter((element) => element.id != req.params.id);
@@ -21,4 +15,4 @@ app.get("/:id", function (req, res) {
     res.send(" course deleted");
   });
 });
-app.listen(3000, () => console.log("connecting ......"));
+
