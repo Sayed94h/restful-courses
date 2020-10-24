@@ -80,9 +80,11 @@ This branch is merged to the master after completion
 
 ### Task A:
 
-- Read the data from the json file called courses.json using get http method
+- add some data to courses.json
 
 ### Task B:
+
+- Read the data from the json file called courses.json using get http method
 
 ### Task C:
 
