@@ -52,13 +52,15 @@ This branch is merged to the master after completion
 
 **Your user story**
 
-#### Created on the branch called `add-to-json`
+#### Created on the branch called `addTo-json`
 
 This branch is merged to the master after completion
 
-### Task A:
+### Task A: JaveScript
 
 - Store the data to the json file called courses.json using post http method
+- Read from database
+- Write to database
 
 ### Task B:
 

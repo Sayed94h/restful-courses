@@ -1,6 +1,38 @@
 [
-	{
-		"id": 1,
-		"name": "js"
-	}
+ {
+  "id": 1,
+  "name": "js"
+ },
+ {
+  "id": 2,
+  "name": "course1"
+ },
+ {
+  "id": 3,
+  "name": "course2"
+ },
+ {
+  "id": 4,
+  "name": "course3"
+ },
+ {
+  "id": 5,
+  "name": "course4"
+ },
+ {
+  "id": 6,
+  "name": "new courklkhseff from postman"
+ },
+ {
+  "id": 7,
+  "name": "new coukhjkhrklkhseff from postman"
+ },
+ {
+  "id": 8,
+  "name": "new html course from postman"
+ },
+ {
+  "id": 9,
+  "name": "new computer course from postman"
+ }
 ]
