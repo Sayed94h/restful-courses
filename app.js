@@ -15,7 +15,7 @@ app.listen(port, () => console.log(`listen to ${port}..`)) // listen the server
 app.get('/basicCourse', (req, res) => {
 
     const fs = require('fs'); //get file
-    const json = fs.readFileSync(`${__dirname}/data/courses.json`, 'utf-8') // read file
+    const json = fs.readFileSync(`${__dirname}/courses.json`, 'utf-8') // read file
     const courseData = JSON.parse(json)
     res.send(courseData)
 
