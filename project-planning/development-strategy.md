@@ -70,7 +70,7 @@ This branch is merged to the master after completion
 
 ## 3. Read from the json file
 
-> assigned to `YourName`
+> assigned to `Feruz`
 
 **Your user story**
 
