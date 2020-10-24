@@ -92,7 +92,7 @@ This branch is merged to the master after completion
 
 ## 4. Delete from the json file
 
-> assigned to `YourName`
+> assigned to `abdulhamid`
 
 **Your user story**
 
