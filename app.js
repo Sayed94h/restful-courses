@@ -18,26 +18,26 @@ const courseData = JSON.parse(json);
 
 // read data from file
 app.get("/basicCourse", (req, res) => {
- 
- res.status(200)
- res.send(courseData);
- 
+  res.status(200);
+  res.send(courseData);
 });
-
 
 // delete data from file
 app.get("/:id", function (req, res) {
-  courses = JSON.parse(data);
+  const data = fs.readFileSync(`${__dirname}/courses.json`, "utf-8");
+  let courses = JSON.parse(data);
   courses = courses.filter((element) => element.id != req.params.id);
-  fs.writeFile("./courses.json", courses, "utf-8", (err, data) => {
-    if (err) {
-      console.log(err);
-    }
-    console.log("course deleted");
-    res.send(" course deleted");
-  });
+  console.log(courses);
+  fs.writeFile(
+    `${__dirname}/courses.json`,
+    JSON.stringify(courses),
+    "utf-8",
+    (err) => {
+      if (err) {
+        console.log(err);
+      }
+      console.log("course deleted");
+      res.send(" course deleted");
+    },
+  );
 });
-
-
-
-
