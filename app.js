@@ -18,7 +18,10 @@ const courseData = JSON.parse(json);
 
 // read data from file
 app.get("/basicCourse", (req, res) => {
+ 
+ res.status(200)
  res.send(courseData);
+ 
 });
 
 
