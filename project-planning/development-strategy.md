@@ -70,7 +70,7 @@ This branch is merged to the master after completion
 
 ## 3. Read from the json file
 
-> assigned to `YourName`
+> assigned to `Feruz`
 
 **Your user story**
 
@@ -80,9 +80,11 @@ This branch is merged to the master after completion
 
 ### Task A:
 
-- Read the data from the json file called courses.json using get http method
+- add some data to courses.json
 
 ### Task B:
+
+- Read the data from the json file called courses.json using get http method
 
 ### Task C:
 
@@ -92,7 +94,7 @@ This branch is merged to the master after completion
 
 ## 4. Delete from the json file
 
-> assigned to `YourName`
+> assigned to `abdulhamid`
 
 **Your user story**
 
