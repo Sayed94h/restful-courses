@@ -58,7 +58,7 @@ This branch is merged to the master after completion
 
 ### Task A:
 
-- Store the data to the json file called courses.json using post http method
+- Store the data to the json file called courses.json using http post method
 
 ### Task B:
 
@@ -84,7 +84,7 @@ This branch is merged to the master after completion
 
 ### Task B:
 
-- Read the data from the json file called courses.json using get http method
+- Read the data from the json file called courses.json using http get method
 
 ### Task C:
 
@@ -104,7 +104,7 @@ This branch is merged to the master after completion
 
 ### Task A:
 
-- Delete a specific data from the json file called courses.json using delete http method
+- Delete a specific data from the json file called courses.json using http delete method
 
 ### Task B:
 
@@ -116,17 +116,17 @@ This branch is merged to the master after completion
 
 ## 5. Update the json file
 
-> assigned to `YourName`
+> assigned to `Sayed Kazimi`
 
 **Your user story**
 
-#### Created on the branch called `update-json`
+#### Created on the branch called `final-touch`
 
 This branch is merged to the master after completion
 
 ### Task A:
 
-- Update or edit the data from the json file called courses.json using put http method
+- Update or edit the data from the json file called courses.json using http put method
 
 ### Task B:
 
@@ -138,7 +138,7 @@ This branch is merged to the master after completion
 
 ## 6. Final-touch
 
-> assigned to `YourName`
+> assigned to `Sayed Kazimi`
 
 **Your user story**
 
@@ -149,6 +149,9 @@ This branch is merged to the master after completion
 ### Task A:
 
 - make sure everything works as it has to work
+- clean up the code
+- do the parts that have not done yet
+- finish the project
 
 ### Task B:
 
