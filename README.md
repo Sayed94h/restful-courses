@@ -40,19 +40,27 @@ Have a look at our [development strategy](./project-planning/development-strateg
 3. Change a course:
 
 > > Use postman app or browser extension --> localhost:PortNumber/api/courses/courseId
+
 > > Change the method to `PUT`
+
 > > {"name": "Type the name of the course"}
+
 > > SEND
 
 4. Delete a course
 
 > > Use postman app or browser extension --> localhost:PortNumber/api/courses/courseId
+
 > > Change the method to `DELETE`
+
 > > SEND
 
 5. Create a new course
 
 > > Use postman app or browser extension --> localhost:PortNumber/api/courses
+
 > > Change the method to `POST`
+
 > > {"name": "Type a name for the new course"}
+
 > > SEND
