@@ -1,43 +1,157 @@
 "use-strict";
 
 // our main application for handling user interaction
-const express = require("express"); // module express
-const app = express(); // call express
-
-//add a piece of middleware (help us to use in request method)
+const Joi = require("joi");
+const express = require("express");
+const app = express();
 app.use(express.json());
 
-// Port
-const port = process.env.PORT || 6000; // make port
-app.listen(port, () => console.log(`listen to ${port}..`)); // listen the server
+const fs = require("fs");
+const dbPath = "./data/courses.json";
+console.log("dbPath: ", dbPath);
+/**
+ * jsonData is parsed data from the file courses.json
+ * toWrite is converted data to string to write to the file courses.json
+ */
+let jsonData, toWrite;
 
-// file system
-const fs = require("fs"); //get file
-const json = fs.readFileSync(`${__dirname}/courses.json`, "utf-8"); // read file
-const courseData = JSON.parse(json);
+//	read from json file
 
-// read data from file
-app.get("/basicCourse", (req, res) => {
-  res.status(200);
-  res.send(courseData);
+function readCallBack(err, data) {
+	if (err) {
+		console.log(err);
+		process.exit();
+	}
+	let parsedData = JSON.parse(data);
+	jsonData = parsedData;
+	console.log("dataaa: ", jsonData, "type of dataaa", typeof jsonData);
+}
+
+fs.readFile(dbPath, "UTF-8", readCallBack);
+
+app.get("/", (req, res) => {
+	res.send("Welcome to our website");
 });
 
-// delete data from file
-app.get("/:id", function (req, res) {
-  const data = fs.readFileSync(`${__dirname}/courses.json`, "utf-8");
-  let courses = JSON.parse(data);
-  courses = courses.filter((element) => element.id != req.params.id);
-  console.log(courses);
-  fs.writeFile(
-    `${__dirname}/courses.json`,
-    JSON.stringify(courses),
-    "utf-8",
-    (err) => {
-      if (err) {
-        console.log(err);
-      }
-      console.log("course deleted");
-      res.send(" course deleted");
-    },
-  );
+app.get("/api/courses", (req, res) => {
+	res.send(jsonData);
 });
+
+app.get("/api/courses/:id", (req, res) => {
+	let specificCourse = jsonData.find(function (c) {
+		return c.id === parseInt(req.params.id);
+	});
+
+	if (!specificCourse) {
+		res.status(404).send("The course with given ID was not found");
+	}
+	res.send(specificCourse);
+});
+
+app.post("/api/courses", (req, res) => {
+	const { error } = validateCourse(req.body);
+	if (error) {
+		res.status(400).send(error.details[0].message);
+		return;
+	}
+	// simple input validation
+	// if (!req.body.name || req.body.name.length < 3) {
+	// 	res.status(400).send("Name is required and should be mini 3 char");
+	// 	return;
+	// }
+	const newCourse = {
+		id: jsonData.length + 1,
+		name: req.body.name,
+	};
+	// push to the json array
+	jsonData.push(newCourse);
+
+	// convert to string
+	toWrite = JSON.stringify(jsonData, null, " ");
+
+	// write to json file
+	fs.writeFile(dbPath, toWrite, "UTF-8", (err) => {
+		if (err) {
+			console.log("Your changes did not saved");
+			process.exit();
+		}
+
+		console.log("your changes were saved");
+	});
+	res.send(newCourse);
+});
+
+app.put("/api/courses/:id", (req, res) => {
+	//get the data
+
+	let specificCourse = jsonData.find(function (c) {
+		return c.id === parseInt(req.params.id);
+	});
+
+	if (!specificCourse) {
+		return res.status(404).send("The course with given ID was not found");
+	}
+	// validate the input
+	const { error } = validateCourse(req.body);
+	if (error) {
+		res.status(400).send(error.details[0].message);
+		return;
+	}
+	// update the data
+	specificCourse.name = req.body.name;
+	toWrite = JSON.stringify(jsonData, null, " ");
+
+	// write to json file (save changes)
+	fs.writeFile(dbPath, toWrite, "UTF-8", (err) => {
+		if (err) {
+			console.log("Your changes did not saved");
+			process.exit();
+		}
+
+		console.log("your changes were saved");
+	});
+	res.send(specificCourse);
+});
+
+app.delete("/api/courses/:id", (req, res) => {
+	//get the data
+
+	let specificCourse = jsonData.find(function (c) {
+		return c.id === parseInt(req.params.id);
+	});
+
+	if (!specificCourse) {
+		return res.status(404).send("The course with given ID was not found");
+	}
+
+	// update the data
+
+	const index = jsonData.indexOf(specificCourse);
+
+	jsonData.splice(index, 1);
+	toWrite = JSON.stringify(jsonData, null, " ");
+
+	// write to json file
+	fs.writeFile(dbPath, toWrite, "UTF-8", (err) => {
+		if (err) {
+			console.log("Your changes did not saved");
+			process.exit();
+		}
+
+		console.log("your changes were saved");
+	});
+	res.send(specificCourse);
+});
+// validate logic
+function validateCourse(course) {
+	const schema = Joi.object({
+		name: Joi.string().min(3).required(),
+	});
+
+	const result = schema.validate(course);
+	return result;
+}
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Listening to the port ${port}...`));
